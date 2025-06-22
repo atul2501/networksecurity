@@ -1,0 +1,41 @@
+MongoDB Database
+        ↓
+Data Ingestion Config
+        ↓
+Data Ingestion Component
+        ↓                              ↘
+Data Ingestion Artifacts        →  Data Validation Config
+                                      ↓
+                            Data Validation Component
+                                      ↓
+                          Data Validation Artifacts
+                                      ↓
+                            Data Transformation Config
+                                      ↓
+                          Data Transformation Component
+                                      ↓
+                        Data Transformation Artifacts
+                                      ↓
+                            Model Trainer Config
+                                      ↓
+                            Model Trainer Component
+                                      ↓
+                          Model Trainer Artifacts
+                                      ↓
+                        Model Evaluation Config
+                                      ↓
+                        Model Evaluation Component
+                                      ↓
+                      Model Evaluation Artifacts
+                                      ↓
+                          [Is Model Accepted?]
+                               ↙        ↘
+                            No            Yes
+                            ↓              ↓
+                          None       Model Pusher Config
+                                          ↓
+                               Model Pusher Component
+                                          ↓
+                             Model Pusher Artifacts
+                                          ↓
+                                     Cloud (AWS, Azure, etc.)

@@ -1,0 +1,20 @@
+1. MongoDB (Raw data source)
+         ↓
+2. Data Ingestion Config
+         ↓
+3. Initiate Data Ingestion
+         ↓
+4. Export Data to Feature Store (→ raw.csv)
+         ↓
+5. Drop Columns (using Schema File)
+         ↓
+6. Split Data into Train and Test
+         ↓
+7. Save Output Files:
+     ├── Feature Store/
+     │     └── raw.csv
+     └── Ingested/
+           ├── train.csv
+           └── test.csv
+         ↓
+8. Create Data Ingestion Artifact (paths, timestamps, etc.)
