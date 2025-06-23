@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/atul2501/Desktop/networksecurity/networksecurity/mlruns/0/13c5ca400cce4cf98c61c154344f2b55/artifacts
+end_time: 1750691418489
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 13c5ca400cce4cf98c61c154344f2b55
+run_name: learned-bass-241
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750691414872
+status: 3
+tags: []
+user_id: atul2501

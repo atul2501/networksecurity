@@ -1,0 +1,10 @@
+artifact_location: file:///Users/atul2501/Desktop/networksecurity/networksecurity/mlruns/0/models/m-6660e0d5852a40bdbc1fcbab0ff1a134/artifacts
+creation_timestamp: 1750691414898
+experiment_id: '0'
+last_updated_timestamp: 1750691418482
+model_id: m-6660e0d5852a40bdbc1fcbab0ff1a134
+model_type: null
+name: model
+source_run_id: 13c5ca400cce4cf98c61c154344f2b55
+status: 2
+status_message: null

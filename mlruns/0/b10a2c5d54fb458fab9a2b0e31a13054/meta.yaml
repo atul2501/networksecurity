@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/atul2501/Desktop/networksecurity/networksecurity/mlruns/0/b10a2c5d54fb458fab9a2b0e31a13054/artifacts
+end_time: 1750693651503
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b10a2c5d54fb458fab9a2b0e31a13054
+run_name: rogue-goat-845
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750693648367
+status: 3
+tags: []
+user_id: atul2501
