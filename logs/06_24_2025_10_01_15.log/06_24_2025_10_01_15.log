@@ -1,7 +1,0 @@
-[   2025-06-24 10:01:18,487 ] 1025 httpx - INFO -  HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
-[   2025-06-24 10:01:18,493 ] 107 dagshub - INFO -  Accessing as atul2501
-[   2025-06-24 10:01:18,984 ] 1025 httpx - INFO -  HTTP Request: GET https://dagshub.com/api/v1/repos/atul2501/networksecurity "HTTP/1.1 200 OK"
-[   2025-06-24 10:01:19,408 ] 1025 httpx - INFO -  HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
-[   2025-06-24 10:01:19,412 ] 107 dagshub - INFO -  Initialized MLflow to track repo "atul2501/networksecurity"
-[   2025-06-24 10:01:19,412 ] 107 dagshub - INFO -  Repository atul2501/networksecurity initialized!
-[   2025-06-24 10:01:23,491 ] 43 root - INFO -  Start data Ingestion
