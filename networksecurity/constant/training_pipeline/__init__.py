@@ -3,22 +3,21 @@ import sys
 import numpy as np
 import pandas as pd
 
-
-
-'''
+"""
 defining common constant variable for training pipeline
-'''
-TARGET_COLUMN="Result"
-PIPELINE_NAME:str="NetSecurity"
-ARTIFACT_DIR:str="Artifacts"
-FILE_NAME:str="phisingData.csv"
+"""
+TARGET_COLUMN = "Result"
+PIPELINE_NAME: str = "NetworkSecurity"
+ARTIFACT_DIR: str = "Artifacts"
+FILE_NAME: str = "phisingData.csv"
 
-TRAIN_FILE_NAME: str="train.csv"
-TEST_FILE_NAME: str ="test.csv"
+TRAIN_FILE_NAME: str = "train.csv"
+TEST_FILE_NAME: str = "test.csv"
 
+SCHEMA_FILE_PATH = os.path.join("data_schema", "schema.yaml")
 
-SCHEMA_FILE_PATH= os.path.join("data_schema","schema.yaml")
-
+SAVED_MODEL_DIR =os.path.join("saved_models")
+MODEL_FILE_NAME = "model.pkl"
 
 
 """
@@ -74,10 +73,4 @@ MODEL_TRAINER_TRAINED_MODEL_NAME: str = "model.pkl"
 MODEL_TRAINER_EXPECTED_SCORE: float = 0.6
 MODEL_TRAINER_OVER_FIITING_UNDER_FITTING_THRESHOLD: float = 0.05
 
-TRAINING_BUCKET_NAME = "netwworksecurity"
-
-"""
-Saved Model related constants
-"""
-SAVED_MODEL_DIR = os.path.join("saved_models")
-MODEL_FILE_NAME = "model.pkl"
+TRAINING_BUCKET_NAME = "netwojjjrksecurity"

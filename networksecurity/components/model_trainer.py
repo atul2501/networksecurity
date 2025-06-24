@@ -24,7 +24,9 @@ from sklearn.ensemble import (
     RandomForestClassifier,
 )
 import mlflow
-
+import joblib
+import dagshub
+dagshub.init(repo_owner='atul2501', repo_name='networksecurity', mlflow=True)
 
 
 class ModelTrainer:
@@ -35,16 +37,39 @@ class ModelTrainer:
         except Exception as e:
             raise NetworkSecurityException(e,sys)
         
-    def track_mlflow(self,best_model,classificationmetric):
-        with mlflow.start_run():
-            f1_score=classificationmetric.f1_score
-            precision_score=classificationmetric.precision_score
-            recall_score=classificationmetric.recall_score
+    # def track_mlflow(self,best_model,classificationmetric):
+    #     with mlflow.start_run():
+    #         f1_score=classificationmetric.f1_score
+    #         precision_score=classificationmetric.precision_score
+    #         recall_score=classificationmetric.recall_score
 
-            mlflow.log_metric("fl_score",f1_score)
-            mlflow.log_metric("precision",precision_score)
-            mlflow.log_metric("recall_score",recall_score)
-            mlflow.sklearn.log_model(best_model,"model")
+    #         mlflow.log_metric("f1_score",f1_score)
+    #         mlflow.log_metric("precision",precision_score)
+    #         mlflow.log_metric("recall_score",recall_score)
+    #         ## mlflow.sklearn.log_model(best_model,"model")
+    #         mlflow.sklearn.log_model(best_model, artifact_path="model", registered_model_name=None) #this code is for latest version
+
+    def track_mlflow(self, best_model, classificationmetric):
+        with mlflow.start_run():
+            f1_score = classificationmetric.f1_score
+            precision_score = classificationmetric.precision_score
+            recall_score = classificationmetric.recall_score
+
+            mlflow.log_metric("f1_score", f1_score)
+            mlflow.log_metric("precision", precision_score)
+            mlflow.log_metric("recall_score", recall_score)
+
+            # ✅ Save model manually
+            model_path = "model.pkl"
+            joblib.dump(best_model, model_path)
+
+            # ✅ Log model as an artifact
+            mlflow.log_artifact(model_path)
+
+            # (Optional) Clean up if needed
+            os.remove(model_path)
+
+
 
         
 

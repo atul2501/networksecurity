@@ -31,8 +31,8 @@ class NetworkDataExtract():
         try:
             data=pd.read_csv(file_path)
             data.reset_index(drop=True,inplace=True)
-            record=list(json.loads(data.T.to_json()).values())
-            return record
+            records=list(json.loads(data.T.to_json()).values())
+            return records
         
         except Exception as e:
             raise NetworkSecurityException(e,sys)
@@ -52,10 +52,10 @@ class NetworkDataExtract():
             return(len(self.records))
 
         except Exception as e:
-            raise NetworkDataExtract(e,sys)
+            raise NetworkSecurityException(e,sys)
         
 if __name__=="__main__":
-    FILE_PATH="/Users/atul2501/Desktop/NSS/Network_Data/phisingData.csv"
+    FILE_PATH="/Users/atul2501/Desktop/networksecurity/networksecurity/Network_Data/phisingData.csv"
     DATABASE="atul2501"
     collection="NetworkData"
     networkobj=NetworkDataExtract()

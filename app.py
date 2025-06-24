@@ -75,7 +75,7 @@ async def predict_route(request: Request,file: UploadFile = File(...)):
         print(df['predicted_column'])
         #df['predicted_column'].replace(-1, 0)
         #return df.to_json()
-        df.to_csv('/Users/atul2501/Desktop/networksecurity/networksecurity/prediction_data/output.csv')
+        df.to_csv('/Users/atul2501/Desktop/networksecurity/networksecurity/prediction_output/output.csv')
         table_html = df.to_html(classes='table table-striped')
         #print(table_html)
         return templates.TemplateResponse("table.html", {"request": request, "table": table_html})
