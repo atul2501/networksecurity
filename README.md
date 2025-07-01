@@ -170,7 +170,3 @@ Key dependencies (see `requirements.txt` for full list):
 - [scikit-learn](https://scikit-learn.org/)
 
 ---
-
-**Feel free to customize this documentation further for your specific needs!**
-
-Would you like this written directly to your `README.md` file?
